@@ -5,14 +5,14 @@ let obj1 = new Object(); //객체 생성자
 let obj2 = {}; // 객체 리터럴
 
 let person = {
-  // object
-  name: "황금별", // 해당 property의 key는 name, value는 "황금별"
-  age: 31,
-  hobby: "Game",
-  job: "Backend Engineer",
-  extra: {},
-  10: 20,
-  "like cat": true,
+    // object
+    name: "황금별", // 해당 property의 key는 name, value는 "황금별"
+    age: 31,
+    hobby: "Game",
+    job: "Backend Engineer",
+    extra: {},
+    10: 20,
+    "like cat": true,
 };
 
 let name = person.name;

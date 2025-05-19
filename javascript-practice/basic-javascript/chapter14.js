@@ -3,20 +3,20 @@
 // 함수 선언식의 경우 if, for와 같은 문법 내의 선언된 경우 function은 지역 스코프를 가지지 않음
 
 function funcA() {
-  let a = 1;
+    let a = 1;
 }
 
 // console.log(a);  // ReferenceError : a is not defined.
 
 if (true) {
-  let c = 1; // if 문 밖에서는 호출 불가능
+    let c = 1; // if 문 밖에서는 호출 불가능
 }
 
 // console.log(c);  // ReferenceError : a is not defined.
 
 if (true) {
-  function funcB() {
-    console.log("funcB 출력..!!");
-  }
+    function funcB() {
+        console.log("funcB 출력..!!");
+    }
 }
 funcB();

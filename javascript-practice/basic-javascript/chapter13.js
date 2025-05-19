@@ -1,17 +1,17 @@
 // 1. 콜백 함수 : 다른 함수의 인수로써 전달된 함수
 function parentFunction(funcVariable) {
-  console.log("parentFunction : I am parent function.");
-  console.log("parentFunction : I will execute sub function..!");
-  funcVariable();
+    console.log("parentFunction : I am parent function.");
+    console.log("parentFunction : I will execute sub function..!");
+    funcVariable();
 }
 
 function subFunction() {
-  console.log("subFunction : I am sub function.");
+    console.log("subFunction : I am sub function.");
 }
 
 parentFunction(subFunction);
 parentFunction(() => {
-  console.log("I am sub function arrow function..!");
+    console.log("I am sub function arrow function..!");
 });
 
 // 2. 콜백 함수 활용
@@ -33,14 +33,14 @@ parentFunction(() => {
 // repeatDouble(5);
 
 function repeat(count, callback) {
-  for (let i = 1; i <= 10; i++) {
-    callback(i);
-  }
+    for (let i = 1; i <= 10; i++) {
+        callback(i);
+    }
 }
 
 console.log("Run repeat");
 repeat(5, function (i) {
-  console.log(`i : ${i}`);
+    console.log(`i : ${i}`);
 }); // repeat
 
 console.log("Run repeat");

@@ -1,10 +1,10 @@
 // math module
 
-function add(a, b) {
+export function add(a, b) {
     return a + b;
 }
 
-function sub(a, b) {
+export function sub(a, b) {
     return a - b;
 }
 
@@ -15,4 +15,9 @@ function sub(a, b) {
 // };
 
 // ES module system.
-export { add, sub };
+// export { add, sub };
+// function 앞에 export가 export로 별도로 선언하지 않아도 됨.
+
+export default function multiply(a, b) {
+    return a * b;
+}

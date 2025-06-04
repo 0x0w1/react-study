@@ -1,14 +1,9 @@
-// Common js module system.
+import mul, { add, sub } from "./math.js";
+import randomColor from "randomcolor";
 
-// const moduleData = require("./math");
-// console.log(moduleData.add(1, 2));
-// console.log(moduleData.sub(1, 2));
-// console.log(moduleData);
+const color = randomColor();
+console.log(color);
 
-// Common js module System
-// const { add, sub } = require("./math");
-
-// ES module system.
-import { add, sub } from "./math.js";
-console.log(add(1, 2));
-console.log(sub(1, 2));
+// console.log(add(1, 2));
+// console.log(sub(1, 2));
+// console.log(mul(2, 2));

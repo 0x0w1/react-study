@@ -1,30 +1,23 @@
 import "./App.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import Button from "./components/Button";
+import { useState } from "react";
 
 function App() {
   // Parent Component
-  const buttonProps = {
-    text: "mail",
-    color: "red",
-    a: 1,
-    b: 2,
-    c: 3,
-  };
+  const [count, setCount] = useState(0);
+  const [light, setLight] = useState("off");
 
   return (
     <>
-      {/* <Button text={"mail"} color={"red"} /> */}
-      <Button {...buttonProps} />
-      <Button text={"cafe"} />
-      <Button text={"blog"}>
-        <div> 자식요소 </div>
-      </Button>
-      <Button text={"test"}>
-        <Header />
-      </Button>
+      <div>
+        <h1>{light}</h1>
+        <button onClick={() => setLight(light === "on" ? "off" : "on")}>
+          {light === "on" ? "Turn Off" : "Turn On"}
+        </button>
+      </div>
+      <div>
+        <h1> {count}</h1>
+        <button onClick={() => setCount(count + 1)}> + </button>
+      </div>
     </>
   );
 }

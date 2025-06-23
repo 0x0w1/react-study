@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 // simple Register form
 // 1. 이름
@@ -13,19 +13,28 @@ const Register = () => {
     country: "",
     bio: "",
   });
+  const countRef = useRef(0);
+  const inputRef = useRef();
 
   const onChangeInput = (e) => {
-    console.log(e.target.name, e.target.value);
     setInput({
       ...input,
       [e.target.name]: e.target.value,
     });
   };
 
+  const onSubmit = () => {
+    if (input.name === "") {
+      // 이름을 입력하는 DOM 요소에 focus를 함
+      inputRef.current.focus();
+    }
+  };
+
   return (
     <div>
       <div>
         <input
+          ref={inputRef}
           onChange={onChangeInput}
           placeholder={"name"}
           name="name"
@@ -51,6 +60,8 @@ const Register = () => {
       <div>
         <textarea value={input.bio} name="bio" onChange={onChangeInput} />
       </div>
+
+      <button onClick={onSubmit}>Submit</button>
     </div>
   );
 };

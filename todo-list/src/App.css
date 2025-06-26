@@ -1,0 +1,8 @@
+.App {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", Courier, monospace;
+  gap: 10px;
+}

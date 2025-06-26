@@ -2,11 +2,13 @@ import "./App.css";
 import Viewer from "./components/Viewer";
 import Controller from "./components/Controller";
 import Even from "./components/Even";
+import Timer2 from "./components/Timer2";
 import { useState, useEffect, useRef } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
   const [input, setInput] = useState("");
+  const [showTimer, setShowTimer] = useState(true);
 
   const isMount = useRef(false);
 
@@ -34,6 +36,12 @@ function App() {
   return (
     <div className="App">
       <h1>Simple Counter</h1>
+      <section>
+        <button onClick={() => setShowTimer(!showTimer)}>
+          {showTimer ? "타이머 숨기기(unmount)" : "타이머 보이기 (mount)"}
+        </button>
+        {showTimer && <Timer2 />}
+      </section>
       <section>
         <input
           value={input}
